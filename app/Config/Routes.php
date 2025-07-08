@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
  // $routes->get('/', 'Home::index');
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('Auth');
+$routes->setDefaultMethod('login');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();

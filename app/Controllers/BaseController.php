@@ -55,4 +55,23 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    function renderAuth($view, $data = [])
+    {
+        $data = [
+            'renderMenu' => false,
+            'appName' => 'Catat Keuangan',
+            'appAuthor' => 'Alif Nur RomadhonS',
+        ];
+        return view('auth/' . $view, $data);
+    }
+
+    function renderAdmin($view, $data = [])
+    {
+        $data = [
+            'renderMenu' => true,
+            'appName' => 'Catat Keuangan',
+            'appAuthor' => 'Alif Nur RomadhonS',
+        ];
+    }
 }
