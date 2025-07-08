@@ -7,22 +7,22 @@
          <hr>
          <ul class="nav nav-pills flex-column mb-auto">
              <li class="nav-item">
-                 <a href="<?= base_url(); ?>/transaksi" class="nav-link active" data-page="transaksi" onclick="showPage('transaksi', this)">
+                 <a href="<?= base_url(); ?>transaksi" class="nav-link active" data-page="transaksi" onclick="showPage('transaksi', this)">
                      <i class="bi bi-arrow-down-up"></i> Transaksi
                  </a>
              </li>
              <li>
-                 <a href="<?= base_url(); ?>/kategori" class="nav-link" data-page="kategori" onclick="showPage('kategori', this)">
+                 <a href="<?= base_url(); ?>kategori" class="nav-link" data-page="kategori" onclick="showPage('kategori', this)">
                      <i class="bi bi-tags-fill"></i> Kategori
                  </a>
              </li>
              <li>
-                 <a href="<?= base_url(); ?>/laporan" class="nav-link" data-page="laporan" onclick="showPage('laporan', this)">
+                 <a href="<?= base_url(); ?>laporan" class="nav-link" data-page="laporan" onclick="showPage('laporan', this)">
                      <i class="bi bi-pie-chart-fill"></i> Laporan
                  </a>
              </li>
              <li>
-                 <a href="<?= base_url(); ?>/profil" class="nav-link" data-page="profil" onclick="showPage('profil', this)">
+                 <a href="<?= base_url(); ?>profil" class="nav-link" data-page="profil" onclick="showPage('profil', this)">
                      <i class="bi bi-person-circle"></i> Profil
                  </a>
              </li>
@@ -37,7 +37,7 @@
                  <li>
                      <hr class="dropdown-divider">
                  </li>
-                 <li><a class="dropdown-item" href="<?= base_url(); ?>/auth/logout">Logout</a></li>
+                 <li><a class="dropdown-item" href="<?= base_url(); ?>auth/logout">Logout</a></li>
              </ul>
          </div>
      </aside>
@@ -49,9 +49,9 @@
  <!-- Bottom Navigation (Hanya tampil di mobile) -->
  <nav id="bottom-nav" class="d-lg-none fixed-bottom">
      <div class="d-flex justify-content-around">
-         <a href="<?= base_url(); ?>/transaksi" class="nav-link active" data-page="transaksi"><i class="bi bi-arrow-down-up"></i><span>Transaksi</span></a>
-         <a href="<?= base_url(); ?>/kategori" class="nav-link" data-page="kategori"><i class="bi bi-tags-fill"></i><span>Kategori</span></a>
-         <a href="<?= base_url(); ?>/laporan" class="nav-link" data-page="laporan"><i class="bi bi-pie-chart-fill"></i><span>Laporan</span></a>
-         <a href="<?= base_url(); ?>/profil" class="nav-link" data-page="profil"><i class="bi bi-person-circle"></i><span>Profil</span></a>
+         <a href="<?= base_url(); ?>transaksi" class="nav-link active" data-page="transaksi"><i class="bi bi-arrow-down-up"></i><span>Transaksi</span></a>
+         <a href="<?= base_url(); ?>kategori" class="nav-link" data-page="kategori"><i class="bi bi-tags-fill"></i><span>Kategori</span></a>
+         <a href="<?= base_url(); ?>laporan" class="nav-link" data-page="laporan"><i class="bi bi-pie-chart-fill"></i><span>Laporan</span></a>
+         <a href="<?= base_url(); ?>profil" class="nav-link" data-page="profil"><i class="bi bi-person-circle"></i><span>Profil</span></a>
      </div>
  </nav>

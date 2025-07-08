@@ -43,6 +43,8 @@ abstract class BaseController extends Controller
      */
     // protected $session;
 
+    protected $data = [];
+
     /**
      * @return void
      */
@@ -50,6 +52,7 @@ abstract class BaseController extends Controller
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
+        $this->data['login'] = session()->get('login');
 
         // Preload any models, libraries, etc, here.
 
@@ -58,20 +61,30 @@ abstract class BaseController extends Controller
 
     function renderAuth($view, $data = [])
     {
-        $data = [
+
+        $appConf = [
             'renderMenu' => false,
             'appName' => 'Catat Keuangan',
-            'appAuthor' => 'Alif Nur RomadhonS',
+            'appAuthor' => 'Alif Nur Romadhon',
         ];
-        return view('auth/' . $view, $data);
+        if (@$data) {
+            $data = array_merge($this->data, $data);
+        }
+        $data = array_merge($data, $appConf);
+        return view($view, $data);
     }
 
     function renderAdmin($view, $data = [])
     {
-        $data = [
+        $appConf = [
             'renderMenu' => true,
             'appName' => 'Catat Keuangan',
-            'appAuthor' => 'Alif Nur RomadhonS',
+            'appAuthor' => 'Alif Nur Romadhon',
         ];
+        if (@$data) {
+            $data = array_merge($this->data, $data);
+        }
+        $data = array_merge($data, $appConf);
+        return view($view, $data);
     }
 }

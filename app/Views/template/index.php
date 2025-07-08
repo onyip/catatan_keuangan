@@ -7,15 +7,21 @@
     <title><?= $appName; ?></title>
     <meta name="author" content="<?= $appAuthor; ?>">
     <!-- Bootstrap 5 CSS -->
-    <link href="<?= base_url(); ?>/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/lib/bootstrap-icon/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/lib/bootstrap-icon/bootstrap-icons.min.css">
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/custom.css">
+
+    <!-- JS -->
+    <!-- jquery -->
+    <script src="<?= base_url(); ?>assets/js/jquery-3.7.1.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/sweetalert2.js"></script>
+    <script src="<?= base_url(); ?>assets/js/custom.js"></script>
 </head>
 
 <body>
@@ -26,7 +32,7 @@
         <?= $this->renderSection('content') ?>
     <?php endif ?>
     <!-- Bootstrap 5 JS Bundle -->
-    <script src="<?= base_url(); ?>/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
