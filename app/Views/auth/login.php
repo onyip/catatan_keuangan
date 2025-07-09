@@ -49,7 +49,7 @@
                             showConfirmButton: false,
                             timer: 1500
                         }).then(() => {
-                            window.location.href = '<?= base_url(); ?>trasnsaksi';
+                            window.location.href = '<?= base_url(); ?>transaksi';
                         });
                     } else {
                         Swal.fire({

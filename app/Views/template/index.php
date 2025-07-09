@@ -10,6 +10,8 @@
     <link href="<?= base_url(); ?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/lib/bootstrap-icon/bootstrap-icons.min.css">
+    <!-- datatable -->
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/lib/datatables/datatables.min.css">
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +23,7 @@
     <!-- jquery -->
     <script src="<?= base_url(); ?>assets/js/jquery-3.7.1.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/sweetalert2.js"></script>
+    <script src="<?= base_url(); ?>assets/lib/datatables/datatables.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/custom.js"></script>
 </head>
 
