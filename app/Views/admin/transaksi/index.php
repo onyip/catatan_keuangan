@@ -30,8 +30,8 @@
                             <tr>
                                 <th class="text-center" width="20%">Tanggal</th>
                                 <th class="text-center" width="10%">Type</th>
-                                <th class="text-center">Keterangan</th>
-                                <th class="text-center" width="20%">Kategori</th>
+                                <th class="text-center" width="25%">Keterangan</th>
+                                <th class="text-center" width="15%">Kategori</th>
                                 <th class="text-end">Nominal</th>
                                 <th class="text-center" width="10%">Aksi</th>
                             </tr>
@@ -66,9 +66,14 @@
                 },
             },
             "columnDefs": [{
-                className: "text-center",
-                "targets": [0, 1, 2, 3, 5]
-            }],
+                    className: "text-center",
+                    "targets": [0, 1, 5]
+                },
+                {
+                    className: "text-end",
+                    "targets": [4]
+                }
+            ],
             "columns": [{
                     "data": "transaksi_tgl_formatted",
                     "orderable": false,
@@ -94,6 +99,13 @@
                 {
                     "data": "nominal",
                     "orderable": false,
+                    "render": function(data, type, row) {
+                        if (row.transaksi_type == 1) {
+                            return '<span class="text-success">+ Rp' + parseInt(data).toLocaleString('id-ID') + '</span>'
+                        } else {
+                            return '<span class="text-danger">- Rp' + parseInt(data).toLocaleString('id-ID') + '</span>'
+                        }
+                    }
                 },
                 {
                     "data": "transaksi_id",
