@@ -36,7 +36,7 @@ class M_kategori extends Model
         $builder->limit($data['length'], $data['start']);
         $result = $builder->get()->getResult();
 
-        $recordsTotal = $this->db->table('mst_kategori mk')->where(['user_id' => session()->get('login')['user_id']])->countAllResults();
+        $recordsTotal = $this->db->table('mst_kategori mk')->where(['user_id' => session()->get('login')['user_id']])->where('deleted_at IS NULL')->countAllResults();
 
         $output = [
             'draw' => intval($data['draw']),
@@ -53,16 +53,16 @@ class M_kategori extends Model
         $kategori_id = _input()->getPost('kategori_id');
         $data = $this->find($kategori_id);
         if ($data) {
-            return json_encode([
+            return [
                 'status' => 'success',
                 'message' => 'Data ditemukan',
                 'data' => $data
-            ]);
+            ];
         } else {
-            return json_encode([
+            return [
                 'status' => 'error',
                 'message' => 'Data tidak ditemukan'
-            ]);
+            ];
         }
     }
 

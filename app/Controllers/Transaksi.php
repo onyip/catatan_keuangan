@@ -37,7 +37,7 @@ class Transaksi extends BaseController
     function get_data()
     {
         $res = $this->m_transaksi->get_data();
-        return $res;
+        return json_encode($res);
     }
 
     function save()

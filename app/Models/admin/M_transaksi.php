@@ -53,16 +53,16 @@ class M_transaksi extends Model
         $transaksi_id = _input()->getPost('transaksi_id');
         $data = $this->find($transaksi_id);
         if ($data) {
-            return json_encode([
+            return [
                 'status' => 'success',
                 'message' => 'Data ditemukan',
                 'data' => $data
-            ]);
+            ];
         } else {
-            return json_encode([
+            return [
                 'status' => 'error',
                 'message' => 'Data tidak ditemukan'
-            ]);
+            ];
         }
     }
 

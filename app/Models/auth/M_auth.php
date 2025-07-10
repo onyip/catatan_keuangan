@@ -38,6 +38,7 @@ class M_auth extends Model
         $user = [
             'created_at' => date('Y-m-d H:i:s'),
             'created_by' => $data['nama_lengkap'],
+            'email' => $data['email'],
             'username' => $data['username'],
             'nama_lengkap' => $data['nama_lengkap'],
             'password' => password_hash($data['password'], PASSWORD_DEFAULT),

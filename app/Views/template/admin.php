@@ -31,14 +31,14 @@
          <div class="dropdown">
              <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                  <?php if (@$login['foto']): ?>
-                     <img src="<?= base_url(); ?>assets/img/user.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                     <img src="<?= base_url('profil/profil_foto'); ?>" alt="" width="32" height="32" class="rounded-circle profile-img me-2">
                  <?php else: ?>
-                     <img src="https://placehold.co/32x32/0d6efd/ffffff?text=<?= substr(strtoupper($login['nama_lengkap']), 0, 1); ?>" alt="" width="32" height="32" class="rounded-circle me-2">
+                     <img src="https://placehold.co/32x32/0d6efd/ffffff?text=<?= substr(strtoupper($login['nama_lengkap']), 0, 1); ?>" alt="" width="32" height="32" class="rounded-circle profile-img me-2">
                  <?php endif ?>
-                 <strong><?= ucwords(strtolower($login['nama_lengkap'])); ?></strong>
+                 <strong><?= strtoupper($login['nama_lengkap']); ?></strong>
              </a>
              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                 <li><a class="dropdown-item" href="<?= base_url(); ?>auth/logout">Logout</a></li>
+                 <li><a class="dropdown-item" href="<?= base_url(); ?>auth/logout"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
              </ul>
          </div>
      </aside>

@@ -15,8 +15,12 @@
                         <input type="text" class="form-control" id="registerName" name="nama_lengkap" required>
                     </div>
                     <div class="mb-3">
-                        <label for="registerEmail" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="registerEmail" name="username" required>
+                        <label for="registerEmail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="registerUsername" name="username" required>
                     </div>
                     <div class="mb-3">
                         <label for="registerPassword" class="form-label">Password</label>

@@ -34,7 +34,7 @@ class Kategori extends BaseController
     function get_data()
     {
         $res = $this->m_kategori->get_data();
-        return $res;
+        return json_encode($res);
     }
 
     function save()

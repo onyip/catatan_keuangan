@@ -46,6 +46,14 @@ class Auth extends BaseController
                     'is_unique'  => 'Username ini sudah terdaftar. Silakan gunakan username lain.'
                 ]
             ],
+            'email' => [
+                'rules'  => 'required|valid_email|is_unique[mst_user.email]',
+                'errors' => [
+                    'required'   => 'Email harus diisi.',
+                    'valid_email' => 'Email tidak valid.',
+                    'is_unique'  => 'Email ini sudah terdaftar. Silakan gunakan email lain.'
+                ]
+            ],
             'nama_lengkap' => [
                 'rules'  => 'required',
                 'errors' => [
@@ -78,5 +86,11 @@ class Auth extends BaseController
         } else {
             return json_encode(['status' => 'error', 'message' => 'Registrasi gagal!']);
         }
+    }
+
+    function logout()
+    {
+        session()->destroy();
+        return redirect()->to(base_url());
     }
 }
