@@ -73,7 +73,6 @@ class M_transaksi extends Model
         if (!@$data['transaksi_id']) {
             $data['created_at'] = date('Y-m-d H:i:s');
             $data['created_by'] = session()->get('login')['nama_lengkap'];
-            // echo json_encode($data); die;
             $db = $this->insert($data);
         } else {
             $data['updated_at'] = date('Y-m-d H:i:s');
