@@ -154,7 +154,7 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Apakah Anda ya?",
+            title: "Apakah Anda yakin?",
             text: "Kategori yang dihapus tidak bisa dikembalikan!!",
             icon: "warning",
             showCancelButton: true,

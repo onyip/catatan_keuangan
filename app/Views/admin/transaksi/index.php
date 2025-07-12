@@ -183,7 +183,7 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Apakah Anda ya?",
+            title: "Apakah Anda yakin?",
             text: "Transaksi yang dihapus tidak bisa dikembalikan!!",
             icon: "warning",
             showCancelButton: true,
